@@ -14,6 +14,7 @@
         <!--Photo Map-->
         <scene sceneID="Eh3-Ch-REm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxu-uv-tTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ghP-Ww-KKQ" customClass="PhotoMapViewController" customModule="Photo_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vrG-Wc-0bn"/>
@@ -57,7 +58,6 @@
                         <segue destination="WeT-38-qba" kind="push" identifier="fullImageSegue" id="B5X-dM-HfZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fxu-uv-tTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640.5" y="-3.5"/>
         </scene>
@@ -72,9 +72,23 @@
                     <view key="view" contentMode="scaleToFill" id="IER-PT-2nq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ss-aZ-79C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5Ss-aZ-79C" secondAttribute="trailing" id="8OK-BX-U9G"/>
+                            <constraint firstItem="5Ss-aZ-79C" firstAttribute="leading" secondItem="IER-PT-2nq" secondAttribute="leading" id="WLh-TJ-w0t"/>
+                            <constraint firstItem="5Ss-aZ-79C" firstAttribute="top" secondItem="FF8-mr-LhG" secondAttribute="bottom" id="aJg-zc-fah"/>
+                            <constraint firstItem="N8d-FM-OAP" firstAttribute="top" secondItem="5Ss-aZ-79C" secondAttribute="bottom" id="bnK-uw-cUn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HUo-VF-R6y"/>
+                    <connections>
+                        <outlet property="photoView" destination="5Ss-aZ-79C" id="7av-e8-LGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRl-fe-rlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
